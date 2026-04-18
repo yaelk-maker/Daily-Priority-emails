@@ -4,8 +4,7 @@
       "mcp__Google-Drive__search_files",
       "mcp__Gmail__search_threads",
       "mcp__Gmail__get_thread",
-      "mcp__Slack__slack_read_channel",
-      "Bash(python3 send_slack.py*)"
+      "Bash(python3 slack_util.py*)"
     ]
   }
 }
