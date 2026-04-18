@@ -39,3 +39,8 @@ Automated Claude Routine that runs daily at **8:35 AM GMT+3** to summarize Prior
 ## Known issues
 
 - **Deferred tool schema loading causes stalls in scheduled runs** — the routine requires `ToolSearch` calls to load MCP tool schemas, which block waiting for human input. Reported to Anthropic (GitHub issue, April 2026). Workaround: pre-authorize read-only MCP tools in `.claude/settings.json`.
+- ## Files
+
+- `CLAUDE.md` — full instructions used by the Claude Routine
+- `.claude/settings.json` — pre-authorized tool permissions to reduce prompts
+
