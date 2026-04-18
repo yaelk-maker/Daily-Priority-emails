@@ -1,3 +1,4 @@
+{
   "permissions": {
     "allow": [
       "mcp__Google-Drive__search_files",
@@ -5,3 +6,5 @@
       "mcp__Gmail__get_thread",
       "mcp__Slack__slack_read_channel"
     ]
+  }
+}
