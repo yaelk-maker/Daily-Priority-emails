@@ -45,7 +45,16 @@ Flag any missing expected email in the Slack message.
 - Show new/unknown warehouse codes as-is
 
 ### 6. Post to Slack
-Post a SINGLE message to Slack channel C0AJ0UHRW4B with this exact format:
+Post a SINGLE message to Slack channel C0AJ0UHRW4B using the `send_slack.py` script, which authenticates with the `SLACK_BOT_TOKEN` env var via the `chat.postMessage` API. Do NOT use the Slack MCP connector to post messages.
+
+Send the message via Bash:
+```bash
+python3 send_slack.py C0AJ0UHRW4B <<'SLACK'
+<your formatted message>
+SLACK
+```
+
+Use this exact message format:
 
 :bar_chart: *Priority ERP Daily Summary | {date}*
 
