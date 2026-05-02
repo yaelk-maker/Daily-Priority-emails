@@ -35,6 +35,8 @@ Flag any missing expected email in the Slack message.
 **CRM Orders:**
 - Total errors = Total Records minus Loaded OK (includes explicit errors AND records not attempted)
 - "Not attempted" = Total Records minus Loaded OK minus explicit errors (records not loaded but missing from the errors HTM file)
+- If the email body omits the "Loaded OK" number (e.g. "נטענו באופן תקין" with no count), treat Loaded OK as 0
+- If no orders errors email/HTM was received, treat explicit errors as 0
 - Extract error types and counts from Google Drive doc
 - Error rate = Total errors / Total records
 
