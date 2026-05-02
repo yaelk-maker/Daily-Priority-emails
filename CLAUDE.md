@@ -33,9 +33,10 @@ Flag any missing expected email in the Slack message.
 ### 5. Report-specific guidelines
 
 **CRM Orders:**
-- Extract from email body: Total records, Loaded OK, Errors
-- Extract from Google Drive doc: unique error types and counts
-- Error rate = Errors / Total records
+- Total errors = Total Records minus Loaded OK (includes explicit errors AND records not attempted)
+- "Not attempted" = Total Records minus Loaded OK minus explicit errors (records not loaded but missing from the errors HTM file)
+- Extract error types and counts from Google Drive doc
+- Error rate = Total errors / Total records
 
 **CRM Receipts:**
 - Total errors = Total Records minus Loaded OK (includes explicit errors AND records not attempted)
@@ -65,6 +66,7 @@ Use this exact message format:
 
 :rotating_light: *CRM Orders: {total} total*
 > `{errors} errors ({rate}%)`
+> Not attempted: {count} ({pct}%)
 > {error_type_1}: {count} ({pct}%)
 > {error_type_2}: {count} ({pct}%)
 
