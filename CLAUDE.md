@@ -34,8 +34,11 @@ Flag any missing expected email in the Slack message.
 
 **CRM Orders:**
 - Extract from email body: Total records, Loaded OK, Errors
-- Extract from Google Drive doc: unique error types and counts
-- Error rate = Errors / Total records
+- Total errors = Total Records minus Loaded OK (includes explicit errors AND records not attempted)
+- "Not attempted (pending invoice load)" = Total Records minus Loaded OK minus explicit errors
+- If the email body says "נטענו באופן תקין" with no number before it, Loaded OK = 0 (all records are not attempted)
+- Extract error types and counts from Google Drive doc (CRM Invoice Loading Errors); if that email is absent, explicit errors = 0
+- Error rate = Total errors / Total records
 
 **CRM Receipts:**
 - Total errors = Total Records minus Loaded OK (includes explicit errors AND records not attempted)
