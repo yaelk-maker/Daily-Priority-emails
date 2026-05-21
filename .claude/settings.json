@@ -1,10 +1,27 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Google-Drive__search_files",
-      "mcp__Gmail__search_threads",
+      "Bash(python3 slack_util.py*)",
+      "mcp__Gmail__create_draft",
+      "mcp__Gmail__create_label",
+      "mcp__Gmail__delete_label",
       "mcp__Gmail__get_thread",
-      "Bash(python3 slack_util.py*)"
+      "mcp__Gmail__label_message",
+      "mcp__Gmail__label_thread",
+      "mcp__Gmail__list_drafts",
+      "mcp__Gmail__list_labels",
+      "mcp__Gmail__search_threads",
+      "mcp__Gmail__unlabel_message",
+      "mcp__Gmail__unlabel_thread",
+      "mcp__Gmail__update_label",
+      "mcp__Google-Drive__copy_file",
+      "mcp__Google-Drive__create_file",
+      "mcp__Google-Drive__download_file_content",
+      "mcp__Google-Drive__get_file_metadata",
+      "mcp__Google-Drive__get_file_permissions",
+      "mcp__Google-Drive__list_recent_files",
+      "mcp__Google-Drive__read_file_content",
+      "mcp__Google-Drive__search_files"
     ]
   }
 }
