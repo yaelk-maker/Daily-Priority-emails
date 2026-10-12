@@ -28,7 +28,7 @@ Extract yesterday's Consignment Gaps count from the output. Do not re-fetch yest
 5. Daily Consignment Gaps Report (HTM attachment -> Google Drive doc)
 6. Warehouse Shipment Summary (HTM attachment -> Google Drive doc)
 
-Flag any missing expected email in the Slack message.
+Flag any missing expected email in the Slack message (except the Consignment Gaps Report, whose absence means 0 gaps).
 
 ### 5. Report-specific guidelines
 
@@ -48,6 +48,8 @@ Flag any missing expected email in the Slack message.
 **Consignment Gaps:**
 - Compare today's report from Google Drive vs yesterday's count from Slack
 - Report only total today vs yesterday (no detailed breakdown)
+- The Daily Consignment Gaps Report is NOT sent when there are no gaps. If the email is absent, today's count = 0 (do NOT flag it as missing and do NOT carry forward an older count).
+- Yesterday's count: take it from yesterday's Slack message; if that message says 0 (or shows the report was absent), yesterday = 0. Never reuse a stale count from an earlier day.
 
 **Warehouse Shipments:**
 - Extract total shipments and breakdown by warehouse code
