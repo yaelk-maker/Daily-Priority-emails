@@ -11,7 +11,7 @@ All Slack operations (reading and posting) MUST use the `slack_util.py` script v
 Search Gmail for emails from priority@maelyscosmetics.com received today. Read each email to extract inline body data (CRM Orders and CRM Receipts have summary numbers in the body).
 
 ### 2. Search Google Drive for today's extracted reports
-Search Google Drive for files in "Priority Daily Reports" folder matching today's date (YYYY-MM-DD format). These are Google Docs created by Apps Script that convert HTM attachments to text. Read each document.
+Search Google Drive for files in the "Priority Daily Reports" folder. Apps Script (runs at ~06:15 UTC) creates a dated subfolder (YYYY-MM-DD) there and puts the docs inside it, so find today's subfolder first and list its contents. If today's subfolder does not exist yet, the extractor has not run; wait a few minutes and retry before reporting the Drive-based sections as pending. These are Google Docs created by Apps Script that convert HTM attachments to text. Read each document.
 
 ### 3. Get yesterday's Consignment Gap count
 Read the most recent message in Slack channel C0AJ0UHRW4B using:
